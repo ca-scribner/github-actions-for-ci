@@ -14,6 +14,10 @@ jobs:
         run: |
           npm install
           npm run build
+      - uses: actions/upload-artifact@v2
+        with:
+          name: webpack artifacts  # This is a name I choose(?)
+          path: public/            # This is where the artifacts I want to upload will be after creating them
   
   test:
     runs-on: ubuntu-latest
